@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-08T08:11:04.730910+00:00",
+  "collected_at": "2026-10-08T08:22:56.794543+00:00",
   "sources": {
     "github": {
       "source": "github",
@@ -42,6 +42,11 @@
         ],
         "recent_active": [
           {
+            "name": "football-copy-check",
+            "pushed_at": "2026-10-08",
+            "private": true
+          },
+          {
             "name": "data-dashboard",
             "pushed_at": "2026-10-08",
             "private": false
@@ -57,11 +62,6 @@
             "private": false
           },
           {
-            "name": "football-copy-check",
-            "pushed_at": "2026-10-08",
-            "private": true
-          },
-          {
             "name": "Dragon-Cliff",
             "pushed_at": "2026-10-07",
             "private": false
@@ -69,15 +69,15 @@
         ]
       },
       "commits": {
-        "total": 3274,
-        "d1": 11,
-        "d7": 298,
-        "d30": 727,
-        "d365": 3274
+        "total": 3277,
+        "d1": 14,
+        "d7": 301,
+        "d30": 730,
+        "d365": 3277
       },
       "open_pr": 1,
       "open_issue": 18,
-      "collected_at": "2026-10-08T08:11:04.730930+00:00"
+      "collected_at": "2026-10-08T08:22:56.794562+00:00"
     },
     "yuque": {
       "source": "yuque",
@@ -103,7 +103,7 @@
       "engagement": {
         "liked_all": 7358
       },
-      "collected_at": "2026-10-08T08:11:16.492370+00:00"
+      "collected_at": "2026-10-08T08:23:08.314102+00:00"
     }
   }
 }
