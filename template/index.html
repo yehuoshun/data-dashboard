@@ -7,57 +7,82 @@
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 <style>
   :root{
-    --bg:#0d1017; --card:#161a23; --card2:#1c2230; --line:#232a36;
-    --fg:#e6e9ef; --dim:#8b94a7; --red:#ff4d5e; --gold:#ffcc4d;
-    --blue:#4dabff; --green:#3ddc84; --purple:#b18cff;
+    --bg:#0b0e14; --surface:#141821; --surface-2:#1a2029; --border:#232b3a;
+    --text:#e8ecf3; --muted:#8b96a8; --muted-2:#5f6b7d;
+    --github:#58a6ff; --yuque:#00c46a;
+    --radius:14px; --gap:16px;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  body{background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;padding:28px 20px 48px;line-height:1.5}
-  .wrap{max-width:1160px;margin:0 auto}
-  header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:22px}
-  header h1{font-size:22px;font-weight:700;letter-spacing:.5px}
-  header h1 span{color:var(--red)}
-  .updated{color:var(--dim);font-size:13px}
-  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-bottom:22px}
-  .kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-  .kpi .label{color:var(--dim);font-size:12.5px;letter-spacing:.4px}
-  .kpi .value{font-size:26px;font-weight:700;margin:6px 0 4px;font-variant-numeric:tabular-nums}
-  .kpi .sub{color:var(--dim);font-size:12px}
+  body{
+    background:var(--bg);color:var(--text);font-size:14px;line-height:1.5;
+    font-family:system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;
+    padding:32px 22px 56px;
+  }
+  .wrap{max-width:1120px;margin:0 auto}
+
+  /* ---------- Header ---------- */
+  header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:26px}
+  header h1{font-size:23px;font-weight:700;letter-spacing:.3px}
+  header h1 em{font-style:normal;color:var(--muted-2);font-weight:400;margin:0 6px}
+  .updated{color:var(--muted);font-size:12.5px}
+
+  /* ---------- 数据源分区 ---------- */
+  .source{
+    background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);
+    padding:20px 22px 22px;margin-bottom:24px;position:relative;overflow:hidden;
+  }
+  .source::before{content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--accent)}
+  .source[data-source="github"]{--accent:var(--github)}
+  .source[data-source="yuque"]{--accent:var(--yuque)}
+
+  .source-head{display:flex;align-items:center;gap:12px;margin-bottom:18px;padding-left:6px}
+  .badge{
+    font-size:13px;font-weight:700;letter-spacing:.4px;padding:4px 12px;border-radius:8px;
+    color:#0b0e14;background:var(--accent);
+  }
+  .source-sub{color:var(--muted);font-size:12.5px}
+  .source-status{margin-left:auto;font-size:12px;color:var(--muted-2)}
+
+  /* ---------- KPI ---------- */
+  .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:18px}
+  .kpi{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:15px 16px}
+  .kpi .label{color:var(--muted);font-size:12.5px}
+  .kpi .value{font-size:27px;font-weight:700;margin:5px 0 3px;font-variant-numeric:tabular-nums;letter-spacing:.5px}
+  .kpi .sub{color:var(--muted-2);font-size:11.5px}
   .kpi.err{border-color:#5a2530}
-  .kpi.err .value{color:var(--red);font-size:15px}
-  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
-  @media(max-width:820px){.grid{grid-template-columns:1fr}}
-  .panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
-  .panel h2{font-size:14px;font-weight:600;color:var(--dim);letter-spacing:.5px;margin-bottom:12px;text-transform:uppercase}
-  .chart{height:260px}
+  .kpi.err .value{color:#ff5c6c;font-size:14px;font-weight:600}
+
+  /* ---------- 面板 ---------- */
+  .panels{display:grid;grid-template-columns:1fr 1fr;gap:var(--gap)}
+  @media(max-width:820px){.panels{grid-template-columns:1fr}}
+  .panel{background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:15px 17px}
+  .panel h2{
+    font-size:12.5px;font-weight:600;color:var(--muted);letter-spacing:.6px;
+    margin-bottom:12px;display:flex;align-items:center;gap:7px;
+  }
+  .panel h2::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .chart{height:250px}
   ul.rows{list-style:none}
-  ul.rows li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px dashed var(--line);font-size:13.5px}
+  ul.rows li{display:flex;justify-content:space-between;gap:14px;padding:8px 0;border-bottom:1px dashed var(--border);font-size:13.5px}
   ul.rows li:last-child{border-bottom:0}
-  ul.rows .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-  ul.rows .val{color:var(--gold);font-variant-numeric:tabular-nums;flex-shrink:0}
-  .tag{font-size:11px;color:var(--dim);border:1px solid var(--line);border-radius:6px;padding:0 5px;margin-left:6px}
-  footer{color:var(--dim);font-size:12px;text-align:center;margin-top:26px}
-  footer code{color:var(--blue)}
+  ul.rows .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:flex;align-items:center}
+  ul.rows .val{color:var(--text);font-variant-numeric:tabular-nums;flex-shrink:0;font-weight:600}
+  .tag{font-size:10.5px;color:var(--muted);border:1px solid var(--border);border-radius:5px;padding:1px 5px;margin-left:7px;font-weight:400}
+  .empty{color:var(--muted-2);font-size:13px;padding:6px 0}
+
+  /* ---------- Footer ---------- */
+  footer{color:var(--muted-2);font-size:12px;text-align:center;margin-top:30px}
+  footer code{color:var(--muted);background:var(--surface);padding:2px 6px;border-radius:5px}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header>
-    <h1>数据总览 <span>·</span> Dashboard</h1>
+    <h1>数据总览<em>·</em>Dashboard</h1>
     <div class="updated" id="updated">加载中…</div>
   </header>
 
-  <section class="kpis" id="kpis"></section>
-
-  <section class="grid">
-    <div class="panel"><h2>GitHub 提交趋势</h2><div class="chart" id="chartCommits"></div></div>
-    <div class="panel"><h2>语雀 · 近 30 天活跃</h2><div class="chart" id="chartYuque"></div></div>
-  </section>
-
-  <section class="grid">
-    <div class="panel"><h2>GitHub · Star 榜</h2><ul class="rows" id="listStars"></ul></div>
-    <div class="panel"><h2>GitHub · 最近活跃</h2><ul class="rows" id="listActive"></ul></div>
-  </section>
+  <div id="sources"></div>
 
   <footer>数据源：GitHub + 语雀 · 采集脚本 <code>code/data-dashboard/collect.py</code></footer>
 </div>
@@ -65,88 +90,134 @@
 <script>
 const DATA = /*__DASHBOARD_DATA__*/;
 
-function num(n){ n = Number(n)||0; return n.toLocaleString('en-US'); }
-function big(n){
+const $ = id => document.getElementById(id);
+const num = n => (Number(n)||0).toLocaleString('en-US');
+const big = n => {
   n = Number(n)||0;
   if(n >= 1e8) return (n/1e8).toFixed(2).replace(/\.?0+$/,'') + ' 亿';
   if(n >= 1e4) return (n/1e4).toFixed(1).replace(/\.0$/,'') + ' 万';
   return n.toLocaleString('en-US');
-}
-function $(id){ return document.getElementById(id); }
-
+};
 const src = (DATA && DATA.sources) || {};
-const gh = src.github || {};
-const yq = src.yuque || {};
 
 /* ---------- 更新时间 ---------- */
-(function(){
-  if(DATA && DATA.collected_at){
-    const d = new Date(DATA.collected_at);
-    $('updated').textContent = '最后更新：' + d.toLocaleString('zh-CN', {hour12:false});
-  }
-})();
+if(DATA && DATA.collected_at){
+  $('updated').textContent = '最后更新：' + new Date(DATA.collected_at).toLocaleString('zh-CN',{hour12:false});
+}
 
-/* ---------- KPI 卡片 ---------- */
-(function(){
-  const cards = [];
-  if(gh.error){ cards.push({label:'GitHub', err:gh.error}); }
-  else if(gh.user){
-    cards.push({label:'GitHub 仓库', value:num(gh.repos.total), sub:`公开 ${gh.user.public_repos} · 私有 ${gh.user.private_repos}`});
-    cards.push({label:'近 7 天提交', value:num(gh.commits.d7), sub:`近 30 天 ${num(gh.commits.d30)}`});
-    cards.push({label:'待办', value:num((gh.open_pr||0)+(gh.open_issue||0)), sub:`PR ${num(gh.open_pr)} · Issue ${num(gh.open_issue)}`});
-  }
-  if(yq.error){ cards.push({label:'语雀', err:yq.error}); }
-  else if(yq.overview){
-    cards.push({label:'语雀知识库', value:num(yq.overview.books_all), sub:`近 30 天新增 ${num(yq.overview.books_30d)}`});
-    cards.push({label:'语雀文档', value:big(yq.overview.docs_all), sub:`近 30 天 ${big(yq.overview.docs_30d)}`});
-    cards.push({label:'累计字数', value:big(yq.overview.words_all), sub:`近 30 天 ${big(yq.overview.words_30d)}`});
-  }
-  $('kpis').innerHTML = cards.map(c => c.err
-    ? `<div class="kpi err"><div class="label">${c.label}</div><div class="value">采集失败</div><div class="sub">${c.err}</div></div>`
-    : `<div class="kpi"><div class="label">${c.label}</div><div class="value">${c.value}</div><div class="sub">${c.sub||''}</div></div>`
-  ).join('');
-})();
+/* ---------- 通用渲染 ---------- */
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function kpiCard(c){
+  if(c.err) return `<div class="kpi err"><div class="label">${esc(c.label)}</div><div class="value">采集失败</div><div class="sub">${esc(c.err)}</div></div>`;
+  return `<div class="kpi"><div class="label">${esc(c.label)}</div><div class="value">${c.value}</div><div class="sub">${esc(c.sub||'')}</div></div>`;
+}
+
+function sourceBlock(id, name, sub, kpis, panels, collectedAt){
+  return `
+  <section class="source" data-source="${id}">
+    <div class="source-head">
+      <span class="badge">${esc(name)}</span>
+      <span class="source-sub">${esc(sub)}</span>
+      <span class="source-status">${collectedAt ? '采集于 '+new Date(collectedAt).toLocaleTimeString('zh-CN',{hour12:false}) : ''}</span>
+    </div>
+    <div class="kpis">${kpis.map(kpiCard).join('')}</div>
+    <div class="panels">${panels.join('')}</div>
+  </section>`;
+}
+
+function panel(title, body, chartId){
+  const inner = chartId ? `<div class="chart" id="${chartId}"></div>` : `<ul class="rows">${body}</ul>`;
+  return `<div class="panel"><h2>${esc(title)}</h2>${inner}</div>`;
+}
+
+function li(name, val, tag){
+  return `<li><span class="name">${esc(name)}${tag?'<span class="tag">'+esc(tag)+'</span>':''}</span><span class="val">${val}</span></li>`;
+}
 
 /* ---------- 图表 ---------- */
 function chart(id, option){
-  if(!window.echarts){ $(id).innerHTML = '<div style="color:#8b94a7;font-size:13px;padding-top:20px">图表库未加载（离线）</div>'; return; }
-  const el = $(id); const c = echarts.init(el, null, {renderer:'canvas'});
-  c.setOption(option); window.addEventListener('resize', ()=>c.resize());
+  if(!window.echarts){ $(id).innerHTML = '<div class="empty">图表库未加载</div>'; return; }
+  const c = echarts.init($(id), null, {renderer:'canvas'});
+  c.setOption(option);
+  window.addEventListener('resize', ()=>c.resize());
+}
+const axisCommon = {
+  axisLine:{lineStyle:{color:'#232b3a'}}, axisLabel:{color:'#8b96a8', fontSize:11}, axisTick:{show:false}
+};
+
+/* ---------- 组装：GitHub ---------- */
+const gh = src.github;
+const blocks = [];
+
+if(gh && gh.error){
+  blocks.push(sourceBlock('github','GitHub','采集失败',[{label:'GitHub', err:gh.error}],[],null));
+}else if(gh && gh.user){
+  const kpis = [
+    {label:'仓库', value:num(gh.repos.total), sub:`公开 ${gh.user.public_repos} · 私有 ${gh.user.private_repos}`},
+    {label:'近 7 天提交', value:num(gh.commits.d7), sub:`近 30 天 ${num(gh.commits.d30)}`},
+    {label:'待办', value:num((gh.open_pr||0)+(gh.open_issue||0)), sub:`PR ${num(gh.open_pr)} · Issue ${num(gh.open_issue)}`},
+    {label:'总 Star', value:num(gh.repos.stars_total), sub:`关注者 ${num(gh.user.followers)}`},
+  ];
+  const starRows = (gh.repos.top_starred||[]).map(r=>li(r.name,'★ '+num(r.stars), r.private?'私有':'')).join('') || '<li class="empty">无数据</li>';
+  const activeRows = (gh.repos.recent_active||[]).map(r=>li(r.name, esc(r.pushed_at||'-'), r.private?'私有':'')).join('') || '<li class="empty">无数据</li>';
+  const panels = [
+    panel('提交趋势（近 1/7/30/365 天）','','chartCommits'),
+    panel('Star 榜', starRows),
+    panel('最近活跃仓库', activeRows),
+  ];
+  blocks.push(sourceBlock('github','GitHub','yehuoshun · 编程活跃度',kpis,panels,gh.collected_at));
 }
 
-if(gh.commits){
+/* ---------- 组装：语雀 ---------- */
+const yq = src.yuque;
+if(yq && yq.error){
+  blocks.push(sourceBlock('yuque','语雀','采集失败',[{label:'语雀', err:yq.error}],[],null));
+}else if(yq && yq.overview){
+  const ov = yq.overview, ed = yq.editing;
+  const kpis = [
+    {label:'知识库', value:num(ov.books_all), sub:`近 30 天新增 ${num(ov.books_30d)}`},
+    {label:'文档', value:big(ov.docs_all), sub:`近 30 天 ${big(ov.docs_30d)}`},
+    {label:'累计字数', value:big(ov.words_all), sub:`近 30 天 ${big(ov.words_30d)}`},
+    {label:'小记', value:num(ov.notes_all), sub:`加入 ${num(ov.days_since_join)} 天`},
+  ];
+  const panels = [
+    panel('近 30 天活跃','','chartYuque'),
+    panel('累计编辑', [
+      li('编辑次数', num(ed.edit_times_all), ''),
+      li('近 30 天编辑', num(ed.edit_times_30d), ''),
+      li('编辑天数', num(ed.edit_days_all), ''),
+      li('获赞', num(yq.engagement.liked_all), ''),
+    ].join('')),
+  ];
+  blocks.push(sourceBlock('yuque','语雀','yehuoshun · 知识库运营',kpis,panels,yq.collected_at));
+}
+
+$('sources').innerHTML = blocks.join('') || '<div class="empty">暂无数据</div>';
+
+/* ---------- 画图 ---------- */
+if(gh && gh.commits){
   chart('chartCommits', {
-    grid:{left:48,right:18,top:24,bottom:34},
+    grid:{left:52,right:16,top:26,bottom:32},
     tooltip:{trigger:'axis'},
-    xAxis:{type:'category', data:['近1天','近7天','近30天','近一年'], axisLine:{lineStyle:{color:'#232a36'}}, axisLabel:{color:'#8b94a7'}},
-    yAxis:{type:'value', splitLine:{lineStyle:{color:'#1c2230'}}, axisLabel:{color:'#8b94a7'}},
-    series:[{type:'bar', data:[gh.commits.d1, gh.commits.d7, gh.commits.d30, gh.commits.d365],
-      itemStyle:{color:'#ff4d5e', borderRadius:[5,5,0,0]}, barWidth:'46%',
-      label:{show:true, position:'top', color:'#e6e9ef', fontSize:11}}]
+    xAxis:Object.assign({type:'category', data:['近1天','近7天','近30天','近一年']}, axisCommon),
+    yAxis:{type:'value', splitLine:{lineStyle:{color:'#232b3a'}}, axisLabel:{color:'#8b96a8', fontSize:11}},
+    series:[{type:'bar', data:[gh.commits.d1,gh.commits.d7,gh.commits.d30,gh.commits.d365],
+      itemStyle:{color:'#58a6ff', borderRadius:[5,5,0,0]}, barWidth:'44%',
+      label:{show:true, position:'top', color:'#e8ecf3', fontSize:11}}]
   });
 }
-if(yq.overview){
+if(yq && yq.overview){
+  const ov = yq.overview, ed = yq.editing;
   chart('chartYuque', {
-    grid:{left:52,right:18,top:24,bottom:34},
+    grid:{left:52,right:16,top:26,bottom:32},
     tooltip:{trigger:'axis'},
-    xAxis:{type:'category', data:['新增知识库','文档','编辑次数','编辑天数'], axisLine:{lineStyle:{color:'#232a36'}}, axisLabel:{color:'#8b94a7'}},
-    yAxis:{type:'value', splitLine:{lineStyle:{color:'#1c2230'}}, axisLabel:{color:'#8b94a7'}},
-    series:[{type:'bar',
-      data:[yq.overview.books_30d, yq.overview.docs_30d, yq.editing.edit_times_30d, yq.editing.edit_days_30d],
-      itemStyle:{color:'#4dabff', borderRadius:[5,5,0,0]}, barWidth:'46%',
-      label:{show:true, position:'top', color:'#e6e9ef', fontSize:11, formatter:p=> big(p.value)}}]
+    xAxis:Object.assign({type:'category', data:['新增知识库','文档','编辑次数','编辑天数']}, axisCommon),
+    yAxis:{type:'value', splitLine:{lineStyle:{color:'#232b3a'}}, axisLabel:{color:'#8b96a8', fontSize:11}},
+    series:[{type:'bar', data:[ov.books_30d, ov.docs_30d, ed.edit_times_30d, ed.edit_days_30d],
+      itemStyle:{color:'#00c46a', borderRadius:[5,5,0,0]}, barWidth:'44%',
+      label:{show:true, position:'top', color:'#e8ecf3', fontSize:11, formatter:p=>big(p.value)}}]
   });
-}
-
-/* ---------- 列表 ---------- */
-function rows(id, arr, fmt){
-  $(id).innerHTML = (arr||[]).map(it => fmt(it)).join('') || '<li style="color:#8b94a7">无数据</li>';
-}
-if(gh.repos){
-  rows('listStars', gh.repos.top_starred, r =>
-    `<li><span class="name">${r.name}${r.private?'<span class="tag">私有</span>':''}</span><span class="val">★ ${num(r.stars)}</span></li>`);
-  rows('listActive', gh.repos.recent_active, r =>
-    `<li><span class="name">${r.name}${r.private?'<span class="tag">私有</span>':''}</span><span class="val">${r.pushed_at||'-'}</span></li>`);
 }
 </script>
 </body>
