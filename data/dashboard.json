@@ -1,0 +1,108 @@
+{
+  "collected_at": "2026-10-08T07:59:14.974879+00:00",
+  "sources": {
+    "github": {
+      "source": "github",
+      "user": {
+        "login": "yehuoshun",
+        "name": "yehuoshun",
+        "public_repos": 41,
+        "private_repos": 5,
+        "followers": 2
+      },
+      "repos": {
+        "total": 46,
+        "stars_total": 18,
+        "top_starred": [
+          {
+            "name": "yuque-ai-mcp",
+            "stars": 7,
+            "private": false
+          },
+          {
+            "name": "czn-auto",
+            "stars": 7,
+            "private": false
+          },
+          {
+            "name": "yuque-migration-skill",
+            "stars": 2,
+            "private": false
+          },
+          {
+            "name": "slay-the-spire-2-mod-skill",
+            "stars": 1,
+            "private": false
+          },
+          {
+            "name": "STS2-ShunMod",
+            "stars": 1,
+            "private": false
+          }
+        ],
+        "recent_active": [
+          {
+            "name": "yuque-ai-mcp",
+            "pushed_at": "2026-10-08",
+            "private": false
+          },
+          {
+            "name": "yehuoshun-notify",
+            "pushed_at": "2026-10-08",
+            "private": false
+          },
+          {
+            "name": "football-copy-check",
+            "pushed_at": "2026-10-08",
+            "private": true
+          },
+          {
+            "name": "Dragon-Cliff",
+            "pushed_at": "2026-10-07",
+            "private": false
+          },
+          {
+            "name": "novel-writer-skill",
+            "pushed_at": "2026-10-07",
+            "private": false
+          }
+        ]
+      },
+      "commits": {
+        "d1": 9,
+        "d7": 296,
+        "d30": 725,
+        "d365": 3272
+      },
+      "open_pr": 1,
+      "open_issue": 18,
+      "collected_at": "2026-10-08T07:59:14.974897+00:00"
+    },
+    "yuque": {
+      "source": "yuque",
+      "user": {
+        "login": "yehuoshun"
+      },
+      "overview": {
+        "books_all": 595,
+        "books_30d": 137,
+        "docs_all": 500451,
+        "docs_30d": 53495,
+        "notes_all": 10485,
+        "words_all": 22023998719,
+        "words_30d": 89289093,
+        "days_since_join": 1751
+      },
+      "editing": {
+        "edit_times_all": 573183,
+        "edit_times_30d": 54726,
+        "edit_days_all": 1362,
+        "edit_days_30d": 25
+      },
+      "engagement": {
+        "liked_all": 7358
+      },
+      "collected_at": "2026-10-08T07:59:25.685560+00:00"
+    }
+  }
+}
