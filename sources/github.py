@@ -94,6 +94,7 @@ def collect() -> dict:
             ],
         },
         "commits": {
+            "total": _count("/search/commits", f"author:{login}", token),
             "d1": commit_count(1),
             "d7": commit_count(7),
             "d30": commit_count(30),

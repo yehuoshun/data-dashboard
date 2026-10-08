@@ -1,17 +1,17 @@
 {
-  "collected_at": "2026-10-08T07:59:14.974879+00:00",
+  "collected_at": "2026-10-08T08:11:04.730910+00:00",
   "sources": {
     "github": {
       "source": "github",
       "user": {
         "login": "yehuoshun",
         "name": "yehuoshun",
-        "public_repos": 41,
+        "public_repos": 42,
         "private_repos": 5,
         "followers": 2
       },
       "repos": {
-        "total": 46,
+        "total": 47,
         "stars_total": 18,
         "top_starred": [
           {
@@ -42,6 +42,11 @@
         ],
         "recent_active": [
           {
+            "name": "data-dashboard",
+            "pushed_at": "2026-10-08",
+            "private": false
+          },
+          {
             "name": "yuque-ai-mcp",
             "pushed_at": "2026-10-08",
             "private": false
@@ -60,23 +65,19 @@
             "name": "Dragon-Cliff",
             "pushed_at": "2026-10-07",
             "private": false
-          },
-          {
-            "name": "novel-writer-skill",
-            "pushed_at": "2026-10-07",
-            "private": false
           }
         ]
       },
       "commits": {
-        "d1": 9,
-        "d7": 296,
-        "d30": 725,
-        "d365": 3272
+        "total": 3274,
+        "d1": 11,
+        "d7": 298,
+        "d30": 727,
+        "d365": 3274
       },
       "open_pr": 1,
       "open_issue": 18,
-      "collected_at": "2026-10-08T07:59:14.974897+00:00"
+      "collected_at": "2026-10-08T08:11:04.730930+00:00"
     },
     "yuque": {
       "source": "yuque",
@@ -102,7 +103,7 @@
       "engagement": {
         "liked_all": 7358
       },
-      "collected_at": "2026-10-08T07:59:25.685560+00:00"
+      "collected_at": "2026-10-08T08:11:16.492370+00:00"
     }
   }
 }

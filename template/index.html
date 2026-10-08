@@ -155,6 +155,7 @@ if(gh && gh.error){
 }else if(gh && gh.user){
   const kpis = [
     {label:'仓库', value:num(gh.repos.total), sub:`公开 ${gh.user.public_repos} · 私有 ${gh.user.private_repos}`},
+    {label:'累计提交', value:num(gh.commits.total), sub:`近一年 ${num(gh.commits.d365)}`},
     {label:'近 7 天提交', value:num(gh.commits.d7), sub:`近 30 天 ${num(gh.commits.d30)}`},
     {label:'待办', value:num((gh.open_pr||0)+(gh.open_issue||0)), sub:`PR ${num(gh.open_pr)} · Issue ${num(gh.open_issue)}`},
     {label:'总 Star', value:num(gh.repos.stars_total), sub:`关注者 ${num(gh.user.followers)}`},
