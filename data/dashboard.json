@@ -1,17 +1,17 @@
 {
-  "collected_at": "2026-10-14T16:00:13.115440+00:00",
+  "collected_at": "2026-10-15T16:00:07.918864+00:00",
   "sources": {
     "github": {
       "source": "github",
       "user": {
         "login": "yehuoshun",
         "name": "yehuoshun",
-        "public_repos": 46,
+        "public_repos": 47,
         "private_repos": 5,
         "followers": 2
       },
       "repos": {
-        "total": 51,
+        "total": 52,
         "stars_total": 17,
         "top_starred": [
           {
@@ -43,8 +43,13 @@
         "recent_active": [
           {
             "name": "yuque-import-skill",
-            "pushed_at": "2026-10-14",
+            "pushed_at": "2026-10-15",
             "private": true
+          },
+          {
+            "name": "interest-radar",
+            "pushed_at": "2026-10-15",
+            "private": false
           },
           {
             "name": "kurumi-fx",
@@ -60,24 +65,19 @@
             "name": "slay-the-spire-2-mod-skill",
             "pushed_at": "2026-10-13",
             "private": false
-          },
-          {
-            "name": "sts2-mod-examples",
-            "pushed_at": "2026-10-13",
-            "private": false
           }
         ]
       },
       "commits": {
-        "total": 3521,
-        "d1": 18,
-        "d7": 250,
-        "d30": 889,
-        "d365": 3521
+        "total": 3546,
+        "d1": 21,
+        "d7": 240,
+        "d30": 907,
+        "d365": 3546
       },
       "open_pr": 0,
       "open_issue": 18,
-      "collected_at": "2026-10-14T16:00:13.115468+00:00"
+      "collected_at": "2026-10-15T16:00:07.918891+00:00"
     },
     "yuque": {
       "source": "yuque",
@@ -85,25 +85,25 @@
         "login": "yehuoshun"
       },
       "overview": {
-        "books_all": 642,
-        "books_30d": 175,
-        "docs_all": 523743,
-        "docs_30d": 67014,
+        "books_all": 652,
+        "books_30d": 184,
+        "docs_all": 533687,
+        "docs_30d": 76921,
         "notes_all": 10523,
-        "words_all": 22046339307,
-        "words_30d": 84061051,
-        "days_since_join": 1758
+        "words_all": 22055414175,
+        "words_30d": 93038394,
+        "days_since_join": 1759
       },
       "editing": {
-        "edit_times_all": 597161,
-        "edit_times_30d": 68584,
-        "edit_days_all": 1368,
+        "edit_times_all": 607108,
+        "edit_times_30d": 78489,
+        "edit_days_all": 1369,
         "edit_days_30d": 25
       },
       "engagement": {
         "liked_all": 7358
       },
-      "collected_at": "2026-10-14T16:00:27.895780+00:00"
+      "collected_at": "2026-10-15T16:00:22.115098+00:00"
     }
   }
 }
