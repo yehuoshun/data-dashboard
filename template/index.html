@@ -4,7 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>数据总览 · Dashboard</title>
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+<!-- 本地优先，CDN 兜底：避免 jsdelivr 在国内被墙导致「图表库未加载」 -->
+<script src="vendor/echarts.min.js"></script>
+<script>
+if(!window.echarts){
+  document.write('<script src="https://registry.npmmirror.com/echarts/5.5.0/files/dist/echarts.min.js"><\/script>');
+}
+</script>
 <style>
   :root{
     --bg:#0b0e14; --surface:#141821; --surface-2:#1a2029; --border:#232b3a;
