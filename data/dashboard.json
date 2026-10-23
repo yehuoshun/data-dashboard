@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-10-22T16:00:05.495384+00:00",
+  "collected_at": "2026-10-23T16:00:25.306532+00:00",
   "sources": {
     "github": {
       "source": "github",
@@ -43,12 +43,12 @@
         "recent_active": [
           {
             "name": "yuque-import-skill",
-            "pushed_at": "2026-10-22",
+            "pushed_at": "2026-10-23",
             "private": true
           },
           {
             "name": "data-dashboard",
-            "pushed_at": "2026-10-21",
+            "pushed_at": "2026-10-22",
             "private": false
           },
           {
@@ -69,15 +69,15 @@
         ]
       },
       "commits": {
-        "total": 3672,
-        "d1": 13,
-        "d7": 121,
-        "d30": 832,
-        "d365": 3672
+        "total": 3689,
+        "d1": 16,
+        "d7": 104,
+        "d30": 849,
+        "d365": 3689
       },
       "open_pr": 0,
       "open_issue": 18,
-      "collected_at": "2026-10-22T16:00:05.495402+00:00"
+      "collected_at": "2026-10-23T16:00:25.306559+00:00"
     },
     "yuque": {
       "source": "yuque",
@@ -85,25 +85,25 @@
         "login": "yehuoshun"
       },
       "overview": {
-        "books_all": 761,
-        "books_30d": 242,
-        "docs_all": 594498,
-        "docs_30d": 132932,
+        "books_all": 776,
+        "books_30d": 257,
+        "docs_all": 595288,
+        "docs_30d": 133447,
         "notes_all": 10558,
-        "words_all": 22152518731,
-        "words_30d": 178764265,
-        "days_since_join": 1766
+        "words_all": 22155883633,
+        "words_30d": 182121320,
+        "days_since_join": 1767
       },
       "editing": {
-        "edit_times_all": 668266,
-        "edit_times_30d": 134678,
-        "edit_days_all": 1376,
+        "edit_times_all": 669059,
+        "edit_times_30d": 134884,
+        "edit_days_all": 1377,
         "edit_days_30d": 26
       },
       "engagement": {
         "liked_all": 7358
       },
-      "collected_at": "2026-10-22T16:00:20.960944+00:00"
+      "collected_at": "2026-10-23T16:00:41.135377+00:00"
     }
   }
 }
