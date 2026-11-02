@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-01T16:00:09.706447+00:00",
+  "collected_at": "2026-11-02T16:00:06.378307+00:00",
   "sources": {
     "github": {
       "source": "github",
@@ -12,7 +12,7 @@
       },
       "repos": {
         "total": 54,
-        "stars_total": 21,
+        "stars_total": 22,
         "top_starred": [
           {
             "name": "yuque-ai-mcp",
@@ -35,49 +35,49 @@
             "private": false
           },
           {
-            "name": "java-in-ai-era",
+            "name": "awesome-china-mcp",
             "stars": 1,
             "private": false
           }
         ],
         "recent_active": [
           {
-            "name": "gu-li-mall",
-            "pushed_at": "2026-11-01",
-            "private": false
-          },
-          {
             "name": "yuque-import-skill",
-            "pushed_at": "2026-11-01",
+            "pushed_at": "2026-11-02",
             "private": false
           },
           {
-            "name": "slay-the-spire-2-mod-skill-archive",
-            "pushed_at": "2026-11-01",
+            "name": "interest-radar",
+            "pushed_at": "2026-11-02",
             "private": false
           },
           {
-            "name": "slay-the-spire-2-mod-skill",
-            "pushed_at": "2026-11-01",
+            "name": "yuque-ai-mcp",
+            "pushed_at": "2026-11-02",
             "private": false
           },
           {
-            "name": "re-harness",
-            "pushed_at": "2026-10-31",
+            "name": "gu-li-mall",
+            "pushed_at": "2026-11-02",
+            "private": false
+          },
+          {
+            "name": "data-dashboard",
+            "pushed_at": "2026-11-01",
             "private": false
           }
         ]
       },
       "commits": {
-        "total": 3875,
-        "d1": 25,
-        "d7": 163,
-        "d30": 814,
-        "d365": 3875
+        "total": 3905,
+        "d1": 19,
+        "d7": 169,
+        "d30": 820,
+        "d365": 3905
       },
       "open_pr": 0,
       "open_issue": 18,
-      "collected_at": "2026-11-01T16:00:09.706466+00:00"
+      "collected_at": "2026-11-02T16:00:06.378327+00:00"
     },
     "yuque": {
       "source": "yuque",
@@ -85,25 +85,25 @@
         "login": "yehuoshun"
       },
       "overview": {
-        "books_all": 922,
-        "books_30d": 364,
-        "docs_all": 652522,
-        "docs_30d": 172877,
+        "books_all": 988,
+        "books_30d": 430,
+        "docs_all": 660519,
+        "docs_30d": 180869,
         "notes_all": 10592,
-        "words_all": 22246945785,
-        "words_30d": 231897863,
-        "days_since_join": 1776
+        "words_all": 22259314087,
+        "words_30d": 244265429,
+        "days_since_join": 1777
       },
       "editing": {
-        "edit_times_all": 726541,
-        "edit_times_30d": 174221,
-        "edit_days_all": 1386,
-        "edit_days_30d": 29
+        "edit_times_all": 734730,
+        "edit_times_30d": 182404,
+        "edit_days_all": 1388,
+        "edit_days_30d": 30
       },
       "engagement": {
         "liked_all": 7359
       },
-      "collected_at": "2026-11-01T16:00:23.938923+00:00"
+      "collected_at": "2026-11-02T16:00:23.098277+00:00"
     }
   }
 }
