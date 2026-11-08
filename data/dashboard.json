@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-08T16:00:11.778059+00:00",
+  "collected_at": "2026-11-08T16:03:53.349672+00:00",
   "sources": {
     "github": {
       "source": "github",
@@ -42,6 +42,11 @@
         ],
         "recent_active": [
           {
+            "name": "data-dashboard",
+            "pushed_at": "2026-11-08",
+            "private": false
+          },
+          {
             "name": "football-copy-check",
             "pushed_at": "2026-11-08",
             "private": false
@@ -60,11 +65,6 @@
             "name": "mybatis-plus-join",
             "pushed_at": "2026-11-07",
             "private": false
-          },
-          {
-            "name": "file-ledger",
-            "pushed_at": "2026-11-07",
-            "private": false
           }
         ]
       },
@@ -77,7 +77,7 @@
       },
       "open_pr": 1,
       "open_issue": 18,
-      "collected_at": "2026-11-08T16:00:11.778086+00:00"
+      "collected_at": "2026-11-08T16:03:53.349696+00:00"
     },
     "yuque": {
       "source": "yuque",
@@ -103,7 +103,7 @@
       "engagement": {
         "liked_all": 7360
       },
-      "collected_at": "2026-11-08T16:00:25.400266+00:00"
+      "collected_at": "2026-11-08T16:04:05.205505+00:00"
     }
   }
 }
