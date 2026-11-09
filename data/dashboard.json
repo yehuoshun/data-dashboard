@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-08T16:03:53.349672+00:00",
+  "collected_at": "2026-11-09T16:00:12.589732+00:00",
   "sources": {
     "github": {
       "source": "github",
@@ -42,12 +42,12 @@
         ],
         "recent_active": [
           {
-            "name": "data-dashboard",
-            "pushed_at": "2026-11-08",
+            "name": "football-copy-check",
+            "pushed_at": "2026-11-09",
             "private": false
           },
           {
-            "name": "football-copy-check",
+            "name": "data-dashboard",
             "pushed_at": "2026-11-08",
             "private": false
           },
@@ -69,15 +69,15 @@
         ]
       },
       "commits": {
-        "total": 4035,
-        "d1": 6,
-        "d7": 145,
-        "d30": 673,
-        "d365": 4035
+        "total": 4045,
+        "d1": 8,
+        "d7": 133,
+        "d30": 629,
+        "d365": 4045
       },
       "open_pr": 1,
       "open_issue": 18,
-      "collected_at": "2026-11-08T16:03:53.349696+00:00"
+      "collected_at": "2026-11-09T16:00:12.589772+00:00"
     },
     "yuque": {
       "source": "yuque",
@@ -85,25 +85,25 @@
         "login": "yehuoshun"
       },
       "overview": {
-        "books_all": 1097,
-        "books_30d": 495,
-        "docs_all": 709393,
-        "docs_30d": 207659,
-        "notes_all": 10631,
-        "words_all": 22336680302,
-        "words_30d": 311193699,
-        "days_since_join": 1783
+        "books_all": 1108,
+        "books_30d": 487,
+        "docs_all": 714571,
+        "docs_30d": 208464,
+        "notes_all": 10632,
+        "words_all": 22347062234,
+        "words_30d": 316843482,
+        "days_since_join": 1784
       },
       "editing": {
-        "edit_times_all": 784201,
-        "edit_times_30d": 209657,
-        "edit_days_all": 1393,
-        "edit_days_30d": 29
+        "edit_times_all": 789087,
+        "edit_times_30d": 210144,
+        "edit_days_all": 1395,
+        "edit_days_30d": 30
       },
       "engagement": {
         "liked_all": 7360
       },
-      "collected_at": "2026-11-08T16:04:05.205505+00:00"
+      "collected_at": "2026-11-09T16:00:34.368860+00:00"
     }
   }
 }
