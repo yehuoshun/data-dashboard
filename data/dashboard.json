@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-17T16:00:05.135589+00:00",
+  "collected_at": "2026-11-18T16:00:14.741023+00:00",
   "sources": {
     "github": {
       "source": "github",
@@ -12,11 +12,11 @@
       },
       "repos": {
         "total": 70,
-        "stars_total": 28,
+        "stars_total": 31,
         "top_starred": [
           {
             "name": "yuque-ai-mcp",
-            "stars": 9,
+            "stars": 10,
             "private": false
           },
           {
@@ -30,54 +30,54 @@
             "private": false
           },
           {
-            "name": "slay-the-spire-2-mod-skill",
+            "name": "yehuoshun-notify",
             "stars": 2,
             "private": false
           },
           {
-            "name": "cn-reach",
-            "stars": 1,
+            "name": "slay-the-spire-2-mod-skill",
+            "stars": 2,
             "private": false
           }
         ],
         "recent_active": [
           {
-            "name": "football-copy-check",
-            "pushed_at": "2026-11-17",
-            "private": true
-          },
-          {
-            "name": "dsh-media-ledger",
-            "pushed_at": "2026-11-17",
+            "name": "300-shout",
+            "pushed_at": "2026-11-18",
             "private": false
           },
           {
+            "name": "football-copy-check",
+            "pushed_at": "2026-11-18",
+            "private": true
+          },
+          {
             "name": "promo-video-skill",
-            "pushed_at": "2026-11-17",
+            "pushed_at": "2026-11-18",
             "private": false
           },
           {
             "name": "novel-writer-skill",
-            "pushed_at": "2026-11-17",
+            "pushed_at": "2026-11-18",
             "private": false
           },
           {
-            "name": "file-ledger",
-            "pushed_at": "2026-11-17",
+            "name": "dsh-media-ledger",
+            "pushed_at": "2026-11-18",
             "private": false
           }
         ]
       },
       "commits": {
-        "total": 5072,
-        "d1": 195,
-        "d7": 1049,
-        "d30": 1421,
-        "d365": 5072
+        "total": 5233,
+        "d1": 139,
+        "d7": 1158,
+        "d30": 1576,
+        "d365": 5233
       },
       "open_pr": 5,
-      "open_issue": 18,
-      "collected_at": "2026-11-17T16:00:05.135608+00:00"
+      "open_issue": 17,
+      "collected_at": "2026-11-18T16:00:14.741045+00:00"
     },
     "yuque": {
       "source": "yuque",
@@ -85,25 +85,25 @@
         "login": "yehuoshun"
       },
       "overview": {
-        "books_all": 1403,
-        "books_30d": 666,
-        "docs_all": 798591,
-        "docs_30d": 223193,
+        "books_all": 1407,
+        "books_30d": 669,
+        "docs_all": 810337,
+        "docs_30d": 230549,
         "notes_all": 10667,
-        "words_all": 22473214075,
-        "words_30d": 351515460,
-        "days_since_join": 1792
+        "words_all": 22487512904,
+        "words_30d": 357671608,
+        "days_since_join": 1793
       },
       "editing": {
-        "edit_times_all": 915026,
-        "edit_times_30d": 265907,
-        "edit_days_all": 1402,
-        "edit_days_30d": 29
+        "edit_times_all": 938668,
+        "edit_times_30d": 285135,
+        "edit_days_all": 1404,
+        "edit_days_30d": 30
       },
       "engagement": {
         "liked_all": 7360
       },
-      "collected_at": "2026-11-17T16:00:22.687351+00:00"
+      "collected_at": "2026-11-18T16:00:33.479890+00:00"
     }
   }
 }
