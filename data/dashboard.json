@@ -1,17 +1,17 @@
 {
-  "collected_at": "2026-11-19T16:00:14.050266+00:00",
+  "collected_at": "2026-11-20T16:00:06.674444+00:00",
   "sources": {
     "github": {
       "source": "github",
       "user": {
         "login": "yehuoshun",
         "name": "yehuoshun",
-        "public_repos": 68,
+        "public_repos": 70,
         "private_repos": 2,
         "followers": 3
       },
       "repos": {
-        "total": 70,
+        "total": 72,
         "stars_total": 31,
         "top_starred": [
           {
@@ -42,42 +42,42 @@
         ],
         "recent_active": [
           {
-            "name": "300-hero-agent",
-            "pushed_at": "2026-11-19",
-            "private": false
-          },
-          {
             "name": "football-copy-check",
-            "pushed_at": "2026-11-19",
+            "pushed_at": "2026-11-20",
             "private": true
           },
           {
-            "name": "interest-radar",
-            "pushed_at": "2026-11-19",
+            "name": "sts2-mod-examples",
+            "pushed_at": "2026-11-20",
             "private": false
           },
           {
-            "name": "fork-radar",
-            "pushed_at": "2026-11-19",
+            "name": "slay-the-spire-2-mod-skill-archive",
+            "pushed_at": "2026-11-20",
             "private": false
           },
           {
-            "name": "yuque-import-skill",
-            "pushed_at": "2026-11-18",
+            "name": "slay-the-spire-2-mod-skill",
+            "pushed_at": "2026-11-20",
+            "private": false
+          },
+          {
+            "name": "agent-man-yuQue",
+            "pushed_at": "2026-11-20",
             "private": false
           }
         ]
       },
       "commits": {
-        "total": 5343,
-        "d1": 109,
-        "d7": 1048,
-        "d30": 1679,
-        "d365": 5343
+        "total": 5561,
+        "d1": 164,
+        "d7": 898,
+        "d30": 1886,
+        "d365": 5561
       },
       "open_pr": 5,
-      "open_issue": 17,
-      "collected_at": "2026-11-19T16:00:14.050289+00:00"
+      "open_issue": 18,
+      "collected_at": "2026-11-20T16:00:06.674470+00:00"
     },
     "yuque": {
       "source": "yuque",
@@ -85,25 +85,25 @@
         "login": "yehuoshun"
       },
       "overview": {
-        "books_all": 1410,
-        "books_30d": 659,
-        "docs_all": 823658,
-        "docs_30d": 235174,
+        "books_all": 1415,
+        "books_30d": 654,
+        "docs_all": 837116,
+        "docs_30d": 242618,
         "notes_all": 10667,
-        "words_all": 22515189107,
-        "words_30d": 373406159,
-        "days_since_join": 1794
+        "words_all": 22539965241,
+        "words_30d": 386965058,
+        "days_since_join": 1795
       },
       "editing": {
-        "edit_times_all": 964417,
-        "edit_times_30d": 302175,
-        "edit_days_all": 1404,
-        "edit_days_30d": 29
+        "edit_times_all": 988673,
+        "edit_times_30d": 320407,
+        "edit_days_all": 1406,
+        "edit_days_30d": 30
       },
       "engagement": {
         "liked_all": 7360
       },
-      "collected_at": "2026-11-19T16:00:32.900746+00:00"
+      "collected_at": "2026-11-20T16:00:26.698391+00:00"
     }
   }
 }
