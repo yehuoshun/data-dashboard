@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-26T16:00:15.247941+00:00",
+  "collected_at": "2026-11-27T16:00:12.427875+00:00",
   "sources": {
     "github": {
       "source": "github",
@@ -43,41 +43,41 @@
         "recent_active": [
           {
             "name": "football-copy-check",
-            "pushed_at": "2026-11-26",
+            "pushed_at": "2026-11-27",
             "private": true
           },
           {
             "name": "fork-radar",
-            "pushed_at": "2026-11-26",
+            "pushed_at": "2026-11-27",
+            "private": false
+          },
+          {
+            "name": "MindPal-Chat",
+            "pushed_at": "2026-11-27",
             "private": false
           },
           {
             "name": "data-dashboard",
-            "pushed_at": "2026-11-25",
+            "pushed_at": "2026-11-26",
             "private": false
           },
           {
             "name": "agent-man",
             "pushed_at": "2026-11-24",
             "private": false
-          },
-          {
-            "name": "agent-man-yuQue",
-            "pushed_at": "2026-11-24",
-            "private": false
           }
         ]
       },
       "commits": {
-        "total": 5933,
-        "d1": 18,
-        "d7": 534,
-        "d30": 2154,
-        "d365": 5933
+        "total": 5939,
+        "d1": 3,
+        "d7": 375,
+        "d30": 2148,
+        "d365": 5939
       },
       "open_pr": 5,
       "open_issue": 18,
-      "collected_at": "2026-11-26T16:00:15.247966+00:00"
+      "collected_at": "2026-11-27T16:00:12.427899+00:00"
     },
     "yuque": {
       "source": "yuque",
@@ -86,24 +86,24 @@
       },
       "overview": {
         "books_all": 1450,
-        "books_30d": 599,
+        "books_30d": 586,
         "docs_all": 862456,
-        "docs_30d": 235734,
+        "docs_30d": 227704,
         "notes_all": 10675,
         "words_all": 22579958829,
-        "words_30d": 373019787,
-        "days_since_join": 1801
+        "words_30d": 359999228,
+        "days_since_join": 1802
       },
       "editing": {
         "edit_times_all": 1022664,
-        "edit_times_30d": 322052,
+        "edit_times_30d": 313988,
         "edit_days_all": 1411,
-        "edit_days_30d": 29
+        "edit_days_30d": 28
       },
       "engagement": {
         "liked_all": 7360
       },
-      "collected_at": "2026-11-26T16:00:37.634210+00:00"
+      "collected_at": "2026-11-27T16:00:32.291654+00:00"
     }
   }
 }
